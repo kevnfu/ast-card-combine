@@ -72,8 +72,9 @@ def process():
 
     total_cards.sort(key=lambda x: x.time)
 
-    with  open('output.txt', 'w') as f:
+    with  open('output.txt', 'w', encoding='utf-8') as f:
         for card in total_cards:
-            f.write(str(card))
+            f.write(str(card) + '\n')
 
 
+process()
